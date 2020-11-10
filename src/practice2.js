@@ -1,8 +1,6 @@
 const inject = (items, sections) => {
-    let i = 0;
-    sections.forEach(section => {
-        items.splice(section.index + i, 0, section.content);
-        i ++;
+    sections.forEach((section, index) => {
+        items.splice(section.index + index, 0, section.content);
     })
     return items;
 }
